@@ -19,6 +19,10 @@ app.get("/", (request, response) => {
     })
 })
 
+app.get("/test", (req, res) => {
+  res.status(200).json({ message: `The server is running...` })
+})
+
 // server up
 const port = process.env.PORT || 5000
 app.listen(port, () => {
